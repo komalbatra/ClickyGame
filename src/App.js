@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
+import Nav from "./components/Nav";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import friends from "./friends.json";
@@ -7,31 +8,77 @@ import friends from "./friends.json";
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    friends
-  };
+    friends,
+    score: 0,
+    topScore: 0,
+    message: "Click on a character to earn points, but don't select a character more than once!",
+   };
 
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
-  };
+
+  handleClick = (id, clicked) => {
+
+		const imageOrder = this.state.friends;
+
+		if (clicked) {
+			imageOrder.forEach((image, index) => {
+				imageOrder[index].clicked = false;
+			});
+			return this.setState({
+				image: imageOrder.sort(() => Math.random() - 0.5),
+				message: "Super-bummer! That was villanous!",
+				score: 0
+			})
+		}
+		else {
+			imageOrder.forEach((image, index) => {
+				if (id === image.id) {
+					imageOrder[index].clicked = true;
+				}
+			});
+
+			const { topScore, score } = this.state;
+			const newScore = score + 1;
+			const newTopScore = newScore > topScore ? newScore : topScore;
+
+			return this.setState({
+				image: imageOrder.sort(() => Math.random() - 0.5),
+				message: "Super! You Guessed Correctly!",
+				score: newScore,
+				topScore: newTopScore,
+			})
+		}
+	};
+
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
+			<div>
+			<Nav></Nav>
       <Wrapper>
-        <Title>Super Hero Clicky Game</Title>
-        {this.state.friends.map(friend => (
+				
+          
+        <Title>
+					<div className="text-center">
+ 						<h1 id = "message-title">{this.state.message}</h1>
+ 					</div>
+ 					<div className="gameScores text-center">
+ 						<p>Score: {this.state.score} | Top Score: {this.state.topScore}</p>
+ 					</div> 
+					</Title>
+				
+        {this.state.friends.map(friends => (
           <FriendCard
-            removeFriend={this.removeFriend}
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
+            id={friends.id}
+            key={friends.id}
+            name={friends.name}
+						image={friends.image}
+						clicked={friends.clicked}
+						handleClick={this.handleClick}
             />
         ))}
       </Wrapper>
+			</div>
     );
   }
 }

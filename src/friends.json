@@ -2,61 +2,73 @@
   {
     "id": 1,
     "name": "Superman",
+    "clicked": false,
     "image": "https://static.comicvine.com/uploads/scale_medium/13/132327/6507037-28872490_1638064799604695_1250122498385004714_n.jpg"
   },
   {
     "id": 2,
     "name": "Batman",
+    "clicked": false,
     "image": "https://static.comicvine.com/uploads/scale_small/5/54400/4293279-batman+91.jpg"
   },
   {
     "id": 3,
     "name": "Ironman",
+    "clicked": false,
     "image": "https://static.comicvine.com/uploads/original/0/2/75583-135098-iron-man.jpg"
   },
   {
     "id": 4,
     "name": "Aquaman",
+    "clicked": false,
     "image": "https://static.comicvine.com/uploads/original/6/66303/1839624-aqm_cv1.jpeg"
   },
   {
     "id": 5,
     "name": "WonderWoman",
+    "clicked": false,
     "image": "https://static.comicvine.com/uploads/scale_small/10/103530/6444044-4130984370-aHR0cDovL3d3dy5uZXdzYXJhbWEuY29tL2ltYWdlcy9pLzAwMC8yMjcvMjY2L29yaWdpbmFsL0pMXzFfdmFyX01hcmtfQnJvb2tzX2IuanBn"
   },
   {
     "id": 6,
     "name": "BlackPanther",
+    "clicked": false,
     "image": "https://static.comicvine.com/uploads/original/0/77/237968-100696-black-panther.jpg"
   },
   {
     "id": 7,
     "name": "Spiderman",
+    "clicked": false,
     "image": "https://static.comicvine.com/uploads/scale_small/8/83882/2026841-spidey_by_mike_d.jpg"
   },
   {
     "id": 8,
     "name": "BlackWidow",
+    "clicked": false,
     "image": "https://static.comicvine.com/uploads/original/6/64109/1286189-black_widow.jpg"
   },
   {
     "id": 9,
     "name": "Hulk",
+    "clicked": false,
     "image": "https://static.comicvine.com/uploads/original/3/33913/1315488-47_incredible_hulk_615.jpg"
   },
   {
     "id": 10,
     "name": "Thor",
+    "clicked": false,
     "image": "https://static.comicvine.com/uploads/original/8/83882/2064466-the_mighty_thor__2_.jpg"
   },
   {
     "id": 11,
     "name": "Wolverine",
+    "clicked": false,
     "image": "https://static.comicvine.com/uploads/original/12/124715/2743795-wolverine_civil_war.png"
   },
   {
     "id": 12,
     "name": "DrStrange",
+    "clicked": false,
     "image": "https://static.comicvine.com/uploads/original/10/103729/3456846-5884109795-12611.jpg"
   }
 ]
