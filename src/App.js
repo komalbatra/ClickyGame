@@ -6,13 +6,12 @@ import Title from "./components/Title";
 import friends from "./friends.json";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
-  state = {
+	state = {
     friends,
     score: 0,
     topScore: 0,
     message: "Click on a character to earn points, but don't select a character more than once!",
-   };
+  };
 
 
   handleClick = (id, clicked) => {
@@ -25,7 +24,7 @@ class App extends Component {
 			});
 			return this.setState({
 				image: imageOrder.sort(() => Math.random() - 0.5),
-				message: "Super-bummer! That was villanous!",
+				message: "Super-bummer! That was treacherously wrong!",
 				score: 0
 			})
 		}
@@ -63,7 +62,7 @@ class App extends Component {
  						<h1 id = "message-title">{this.state.message}</h1>
  					</div>
  					<div className="gameScores text-center">
- 						<p>Score: {this.state.score} | Top Score: {this.state.topScore}</p>
+ 						<p><strong>Score:</strong> {this.state.score} | <strong>Top Score:</strong> {this.state.topScore}</p>
  					</div> 
 					</Title>
 				

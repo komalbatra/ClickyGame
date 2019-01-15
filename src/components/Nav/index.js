@@ -1,9 +1,10 @@
 import React from "react";
+import "./style.css";
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-    <span class="navbar-brand mb-0 h1"><h1 id="nav-text">Super Clicky Game</h1></span>
+    <nav className="navbar navbar-expand-lg navbar-dark">
+    <span class="mb-0 h1"><h1 id="nav-text"><strong>Super Clicky Game</strong></h1></span>
     </nav>
   );
 }
